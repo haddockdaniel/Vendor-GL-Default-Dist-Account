@@ -177,9 +177,9 @@ namespace JurisUtilityBase
                 UpdateStatus("Updating Vendors...", 1, 1);
                 string SQL = "";
                 if (fromGLAccount.Equals("****"))
-                    SQL = "update vendor set VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + toGLAccount + "')";
+                    SQL = "update vendor set VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + toGLAccount + "') where vensysnbr not in (1,2)";
                 else
-                    SQL = "update Vendor Set VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + toGLAccount + "') where VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + fromGLAccount + "')";
+                    SQL = "update Vendor Set VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + toGLAccount + "') where VenDefaultDistAcct = (select ChtSysNbr from ChartOfAccounts where " + formattingString + " = '" + fromGLAccount + "') and vensysnbr not in (1,2)";
                 _jurisUtility.ExecuteNonQueryCommand(0, SQL);
 
 
