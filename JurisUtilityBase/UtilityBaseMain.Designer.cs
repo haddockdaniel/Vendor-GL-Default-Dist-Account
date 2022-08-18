@@ -147,7 +147,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(268, 22);
             this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "Select New Discount Account";
+            this.textBox3.Text = "Select New Dist Account";
             // 
             // textBox2
             // 
@@ -157,7 +157,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 22);
             this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Select Discount Account to Change";
+            this.textBox2.Text = "Select Dist Account to Change";
             // 
             // cbTo
             // 
